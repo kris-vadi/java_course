@@ -1,0 +1,11 @@
+package day1;
+
+public class Task6 {
+    public static void main(String[] args) {
+        int k = 7;
+        for (int i = 1; i <= 9; i++) {
+            int mult = i * k;
+            System.out.println( i + " * " + k + " = " + mult);
+        }
+    }
+}
