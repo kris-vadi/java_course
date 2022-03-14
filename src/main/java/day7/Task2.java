@@ -13,13 +13,6 @@ public class Task2 {
         Player player5 = new Player(random.nextInt(10) + 90);
         Player player6 = new Player(random.nextInt(10) + 90);
 
-        System.out.println(player1.getStamina()+" "+
-        player2.getStamina()+" "+
-        player3.getStamina()+" "+
-        player4.getStamina()+" "+
-        player5.getStamina()+" "+
-        player6.getStamina());
-
         Player.info();
         System.out.println(Player.getCountPlayers());
 
