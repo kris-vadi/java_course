@@ -1,7 +1,5 @@
 package day7;
 
-import com.sun.source.tree.ContinueTree;
-
 public class Player {
     private int stamina;
     public static final int MAX_STAMINA = 100;

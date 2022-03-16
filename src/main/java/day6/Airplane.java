@@ -7,6 +7,14 @@ public class Airplane {
     private double weight;
     private double fuel;
 
+    public Airplane(String manufacturer, int year, double length, double weight){
+        this.manufacturer = manufacturer;
+        this.year = year;
+        this.length = length;
+        this.weight = weight;
+        fuel = 0;
+    }
+
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
@@ -29,14 +37,6 @@ public class Airplane {
 
     public double getFuel() {
         return fuel;
-    }
-
-    public Airplane(String manufacturer, int year, double length, double weight){
-        this.manufacturer = manufacturer;
-        this.year = year;
-        this.length = length;
-        this.weight = weight;
-        fuel = 0;
     }
 
     public void info(){
