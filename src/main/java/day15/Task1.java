@@ -32,7 +32,7 @@ public class Task1 {
                 String[] separateLine = line.split(";");
 
                 if (separateLine.length != 3)
-                    throw new IllegalArgumentException();
+                    throw new IllegalArgumentException("Некорректный входной файл");
 
                 if (separateLine[2].equals("0")) {
                     printWriter.println(line.replace(";", ","));

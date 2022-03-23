@@ -17,13 +17,9 @@ public class Task1 {
             String line = scanner.nextLine();
             String[] numbersLine = line.split(" ");
 
-            int[] numbers = new int[10];
-            int i = 0;
             int sum = 0;
             for (String number : numbersLine) {
-                numbers[i] = Integer.parseInt(number);
-                sum += numbers[i];
-                i++;
+                sum += Integer.parseInt(number);
             }
             System.out.println(sum);
         } catch (FileNotFoundException e) {

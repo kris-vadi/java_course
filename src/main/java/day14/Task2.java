@@ -10,28 +10,29 @@ public class Task2 {
     public static void main(String[] args) {
         File file = new File("people.txt");
 
+        System.out.println(parseFileToStringList(file));
+    }
+
+    public static List<String> parseFileToStringList(File file) {
         try {
-            System.out.println(parseFileToStringList(file));
+            Scanner scanner = new Scanner(file);
+            List<String> peolpe = new ArrayList<>();
+
+            while(scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                peolpe.add(line);
+
+                String[] man = line.split(" ");
+                if(Integer.parseInt(man[1]) < 0)
+                    throw new IllegalArgumentException("Некорректный входной файл");
+            }
+            scanner.close();
+            return peolpe;
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         } catch (IllegalArgumentException e) {
-            System.out.println("Некорректный входной файл");
+            System.out.println(e.getMessage());
         }
-    }
-
-    public static List<String> parseFileToStringList(File file) throws FileNotFoundException {
-        Scanner scanner = new Scanner(file);
-        List<String> peolpe = new ArrayList<>();
-
-        while(scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            peolpe.add(line);
-
-            String[] man = line.split(" ");
-            if(Integer.parseInt(man[1]) < 0)
-                throw new IllegalArgumentException();
-        }
-        scanner.close();
-        return peolpe;
+        return null;
     }
 }
